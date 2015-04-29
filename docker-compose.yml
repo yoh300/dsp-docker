@@ -6,9 +6,9 @@ web:
     SERVERNAME: dsp.local
   build: .
   links:
-   - mysql:db
+    - mysql:db
   ports:
-   - "8000:80"
+    - "80:80"
 
 mysql:
   environment:
