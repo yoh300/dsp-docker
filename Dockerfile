@@ -34,4 +34,7 @@ VOLUME ["/var/log/apache2", "/opt/dreamfactory/platform"]
 
 ADD database.config.php /opt/dreamfactory/platform/config/database.config.php
 
-CMD ["/usr/sbin/apachectl", "-e", "info", "-DFOREGROUND"]
+ADD entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
