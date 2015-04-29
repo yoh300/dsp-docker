@@ -3,6 +3,7 @@ web:
     DB_NAME: dsp
     DB_USER: dsp
     DB_PASS: dsp
+    SERVERNAME: dsp.local
   build: .
   links:
    - mysql:db
