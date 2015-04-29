@@ -1,0 +1,18 @@
+web:
+  environment:
+    DB_NAME: dsp
+    DB_USER: dsp
+    DB_PASS: dsp
+  build: .
+  links:
+   - mysql:db
+  ports:
+   - "8000:80"
+
+mysql:
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: dsp
+    MYSQL_USER: dsp
+    MYSQL_PASSWORD: dsp
+  image: mysql
