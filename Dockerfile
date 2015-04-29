@@ -32,3 +32,5 @@ EXPOSE 80
 
 CMD ["apachectl", "-e", "info", "-DFOREGROUND"]VOLUME ["/var/log/apache2", "/opt/dreamfactory/platform"]
 VOLUME ["/var/log/apache2", "/opt/dreamfactory/platform"]
+
+ADD database.config.php /opt/dreamfactory/platform/config/database.config.php
