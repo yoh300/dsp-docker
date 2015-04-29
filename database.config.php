@@ -40,7 +40,7 @@ if ( !class_exists( '\\Yii', false ) )
 Platform::storeSet( INSTALL_TYPE_KEY, InstallationTypes::STANDALONE_PACKAGE );
 
 return array(
-    'connectionString'      => 'mysql:host='.getenv('DB_PORT_3306_TCP_ADDR').';port='.getenv('DB_PORT_3306_TCP_PORT').';dbname='.getenv('DB_NAME'),
+    'connectionString'      => 'mysql:host='.getenv('DB_HOST').';port='.getenv('DB_PORT').';dbname='.getenv('DB_NAME'),
     'username'              => getenv('DB_USER'),
     'password'              => getenv('DB_PASS'),
     'emulatePrepare'        => true,
