@@ -22,19 +22,17 @@ RUN chmod 775 /opt/dreamfactory/platform/web/assets/
 
 RUN rm /etc/apache2/sites-enabled/000-default.conf
 
-ADD dsp.conf /etc/apache2/sites-available/dsp.conf
-
-RUN a2ensite dsp
-
 RUN php5enmod mcrypt
-
-EXPOSE 80
-
-VOLUME ["/var/log/apache2", "/opt/dreamfactory/platform"]
 
 ADD database.config.php /opt/dreamfactory/platform/config/database.config.php
 
+ADD dsp.conf /etc/apache2/sites-available/dsp.conf
+RUN a2ensite dsp
+
+VOLUME ["/var/log/apache2", "/opt/dreamfactory/platform"]
+
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-
 ENTRYPOINT ["/entrypoint.sh"]
+
+EXPOSE 80
