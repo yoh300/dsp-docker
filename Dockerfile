@@ -30,4 +30,5 @@ RUN php5enmod mcrypt
 
 EXPOSE 80
 
-CMD ["apachectl", "-e", "info", "-DFOREGROUND"]
+CMD ["apachectl", "-e", "info", "-DFOREGROUND"]VOLUME ["/var/log/apache2", "/opt/dreamfactory/platform"]
+VOLUME ["/var/log/apache2", "/opt/dreamfactory/platform"]
