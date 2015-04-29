@@ -1,8 +1,9 @@
 # Setup
 ## Get Docker
 - See: [https://docs.docker.com/installation](https://docs.docker.com/installation)
+
 ## Get Docker Compose (optional)
-See [https://docs.docker.com/compose/install](https://docs.docker.com/compose/install)
+- See [https://docs.docker.com/compose/install](https://docs.docker.com/compose/install)
 
 # Start
 ## Using Docker Compose
