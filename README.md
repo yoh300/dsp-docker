@@ -14,7 +14,7 @@
 ## Using CLI
 **All the provided values are defaults and you should change them**
 ### Start the database
-- run `docker run -d --name mysql-dsp -e "MYSQL_ROOT_PASSWORD=root" -e "MYSQL_DATABASE=dsp" -e "MYSQL_USER=dsp" -e "MYSQL_PASSWORD=dsp" mysql`
+- run `docker run -d --name mysql-dsp -e "MYSQL_ROOT_PASSWORD=root" -e "MYSQL_DATABASE=dsp" -e "MYSQL_USER=dsp" -e "MYSQL_PASSWORD=dsp" -e "SERVERNAME=localhost" mysql`
 
 ### Build DSP Image
 - run `docker build -t dsp .`
