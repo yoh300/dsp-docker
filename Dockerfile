@@ -7,6 +7,9 @@ RUN apt-get update && \
 
 RUN pecl install mongo
 
+RUN echo "ServerName localhost" | tee /etc/apache2/conf-available/servername.conf && \
+    a2enconf servername
+
 RUN mkdir -p /opt/dreamfactory/platform && \
     chmod 777 /opt/dreamfactory/platform
 
