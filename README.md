@@ -1,4 +1,4 @@
-Supported tags and respective `Dockerfile links
+Supported tags and respective `Dockerfile` links
 - [`1.9.2`, `1.9`, `latest` (*1.9/Dockerfile*)](https://github.com/dreamfactorysoftware/dsp-docker/blob/master/Dockerfile)
 
 # Setup
@@ -36,7 +36,7 @@ You can access these directories from another container if you use the option `-
 
 ## Access from host machine
 ### Docker Compose
-Edit `docker-compose.yml` and add `volumes:` section. See [See docs](https://docs.docker.com/compose/yml/#volumes)
+Edit `docker-compose.yml` and add `volumes:` section. [See docs](https://docs.docker.com/compose/yml/#volumes)
 ### CLI
 Add `-v HOST_PATH:/opt/dreamfactory/platform/logs -v HOST_PATH:/var/log/apache2`
 
