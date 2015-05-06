@@ -3,7 +3,8 @@ FROM debian:jessie
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
-    apt-get install -y curl apache2 php5 php5-common php5-cli php5-curl php5-json php5-mcrypt php5-gd php5-mysql mysql-client git php-pear php5-dev
+    apt-get install -y curl apache2 php5 php5-common php5-cli php5-curl php5-json php5-mcrypt php5-gd php5-mysql mysql-client git php-pear php5-dev && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN pecl install mongo
 
