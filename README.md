@@ -24,3 +24,16 @@
 
 ### Start DSP with external MySQL database
 - run `docker run -d -e "DB_HOST=db.foo.bar" -e "DB_PORT=3306" --name dsp -e "DB_USER=dsp" -e "DB_PASS=dsp" -e "DB_NAME=dsp" dsp:1.9.2`
+
+# Access logs
+Log files are located at `/opt/dreamfactory/platform/logs` and `/var/log/apache2`.
+
+## Access from another container
+You can access these directories from another container if you use the option `--volumes-from dsp`.
+
+## Access from host machine
+### Docker Compose
+Edit `docker-compose.yml` and add `volumes:` section. See [See docs](https://docs.docker.com/compose/yml/#volumes)
+### CLI
+Add `-v HOST_PATH:/opt/dreamfactory/platform/logs -v HOST_PATH:/var/log/apache2`
+
