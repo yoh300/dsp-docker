@@ -13,7 +13,8 @@ RUN echo "ServerName localhost" | tee /etc/apache2/conf-available/servername.con
 RUN mkdir -p /opt/dreamfactory/platform && \
     chmod 777 /opt/dreamfactory/platform
 
-RUN git clone https://github.com/dreamfactorysoftware/dsp-core.git /opt/dreamfactory/platform
+ENV DSP_CORE_VERSION 1.9.2
+RUN git clone --depth 1 -b $DSP_CORE_VERSION https://github.com/dreamfactorysoftware/dsp-core.git /opt/dreamfactory/platform
 
 WORKDIR /opt/dreamfactory/platform
 
