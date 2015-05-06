@@ -1,3 +1,6 @@
+Supported tags and respective `Dockerfile links
+- [`1.9.2`, `1.9`, `latest` (*1.9/Dockerfile*)](https://github.com/dreamfactorysoftware/dsp-docker/blob/master/Dockerfile)
+
 # Setup
 ## Get Docker
 - See: [https://docs.docker.com/installation](https://docs.docker.com/installation)
