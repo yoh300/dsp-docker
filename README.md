@@ -1,4 +1,5 @@
 Supported tags and respective `Dockerfile links
+
 - [`1.9.2`, `1.9`, `latest` (*1.9/Dockerfile*)](https://github.com/dreamfactorysoftware/dsp-docker/blob/1.9.2/Dockerfile)
 
 # Setup
