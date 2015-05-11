@@ -10,6 +10,15 @@ Supported tags and respective `Dockerfile links
 - See [https://docs.docker.com/compose/install](https://docs.docker.com/compose/install)
 
 # Start
+
+## Using DockerHub Image
+### Pull DSP image
+- run `pull dreamfactorysoftware/dsp-docker`
+### Start the database
+- run `docker run -d --name mysql-dsp -e "MYSQL_ROOT_PASSWORD=root" -e "MYSQL_DATABASE=dsp" -e "MYSQL_USER=dsp" -e "MYSQL_PASSWORD=dsp" mysql`
+### Start DSP with linked MySQL database container
+- run `docker run -d --link mysql-dsp:db -p 8080:80 --name dsp -e "DB_USER=dsp" -e "DB_PASS=dsp" -e "DB_NAME=dsp" -e "SERVERNAME=localhost" dreamfactorysoftware/dsp-docker`
+
 ## Using Docker Compose
 - edit `docker-compose.yml` and change values to fit your needs
 - run `docker-compose build`
