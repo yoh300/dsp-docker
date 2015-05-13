@@ -14,7 +14,6 @@ The Docker image we provide does not include PHP drivers for MS SQL. If you need
 
 php5-sybase php5-odbc freetds-common
 
-
 # Start
 
 ## Using DockerHub Image
