@@ -9,6 +9,12 @@ Supported tags and respective `Dockerfile links
 ## Get Docker Compose (optional)
 - See [https://docs.docker.com/compose/install](https://docs.docker.com/compose/install)
 
+## Using MS SQL?
+The Docker image we provide does not include PHP drivers for MS SQL. If you need this functionality add the following to the 'apt-get install' line in the Dockerfile and build yourself a new image using the steps below.
+
+php5-sybase php5-odbc freetds-common
+
+
 # Start
 
 ## Using DockerHub Image
