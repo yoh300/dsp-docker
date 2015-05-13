@@ -1,4 +1,5 @@
 Supported tags and respective `Dockerfile links
+
 - [`1.9.2`, `1.9`, `latest` (*1.9/Dockerfile*)](https://github.com/dreamfactorysoftware/dsp-docker/blob/1.9.2/Dockerfile)
 
 # Setup
@@ -14,6 +15,17 @@ The Docker image we provide does not include PHP drivers for MS SQL. If you need
 php5-sybase php5-odbc freetds-common
 
 # Start
+
+## Using DockerHub Image
+### Pull DSP image
+- run `pull dreamfactorysoftware/dsp-docker`
+
+### Start the database
+- run `docker run -d --name mysql-dsp -e "MYSQL_ROOT_PASSWORD=root" -e "MYSQL_DATABASE=dsp" -e "MYSQL_USER=dsp" -e "MYSQL_PASSWORD=dsp" mysql`
+
+### Start DSP with linked MySQL database container
+- run `docker run -d --link mysql-dsp:db -p 8080:80 --name dsp -e "DB_USER=dsp" -e "DB_PASS=dsp" -e "DB_NAME=dsp" -e "SERVERNAME=localhost" dreamfactorysoftware/dsp-docker`
+
 ## Using Docker Compose
 - edit `docker-compose.yml` and change values to fit your needs
 - run `docker-compose build`
