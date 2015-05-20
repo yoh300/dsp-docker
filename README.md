@@ -18,7 +18,7 @@ php5-sybase php5-odbc freetds-common
 
 ## Using DockerHub Image
 ### Pull DSP image
-- run `pull dreamfactorysoftware/dsp-docker`
+- run `docker pull dreamfactorysoftware/dsp-docker`
 
 ### Start the database
 - run `docker run -d --name mysql-dsp -e "MYSQL_ROOT_PASSWORD=root" -e "MYSQL_DATABASE=dsp" -e "MYSQL_USER=dsp" -e "MYSQL_PASSWORD=dsp" mysql`
